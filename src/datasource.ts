@@ -1,9 +1,9 @@
 import _ from 'lodash';
 
+import {CONSUMER_KEY} from './api';
 import {getTimeSeriesFromResponse} from './resultTransformations';
 
 const CACHE_EXPIRATION = 1000 * 60 * 60; // 1h in millies
-const CONSUMER_KEY = '82803-cce6405411edc8c15749f418';
 
 export default class PocketDatasource {
   type: string;

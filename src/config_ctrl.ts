@@ -1,4 +1,5 @@
-const CONSUMER_KEY = '82803-cce6405411edc8c15749f418';
+import {CONSUMER_KEY} from './api';
+
 const POCKET_URL = 'https://getpocket.com';
 
 function getRequestToken(): string {
