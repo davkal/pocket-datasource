@@ -1,0 +1,22 @@
+<div class="grafana-info-box">
+	<h5>How it works</h5>
+	<p>
+		This datasource returns a timeseries showing the number of items saved to Pocket.
+		In order to produce the timeseries, this datasource needs to connect to your Pocket account.
+	</p>
+	<p>
+			Click the "Connect to Pocket" button below. This will open Pocket to let you log in and authenticate the datasource.
+			<div class="gf-form-button-row">
+					<button type="button" class="btn btn-success" ng-click="ctrl.connect()">
+					Connect to Pocket
+				</button>	
+			</div>
+
+			
+	</p>
+	<p>Note: This will allow the datasource to retrieve your list of Pocket items, including the item URLs and titles.</p>
+	<div class="gf-form">
+			<span class="gf-form-label width-10">Status</span>
+			<input class="gf-form-input width-20" disabled type="text" ng-model="ctrl.status" />
+		</div>
+</div>

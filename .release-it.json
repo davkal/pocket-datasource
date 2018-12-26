@@ -1,0 +1,7 @@
+{
+  "github": {
+    "release": true,
+    "assets": ["dist/*.zip"]
+  },
+  "buildCommand": "npm run build; cd dist; zip -r pocket-datasource-${version}.zip *"
+}

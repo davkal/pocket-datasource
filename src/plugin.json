@@ -1,0 +1,17 @@
+{
+  "type": "datasource",
+  "name": "Pocket",
+  "id": "grafana-pocket-datasource",
+  "metrics": true,
+  "annotations": false,
+  "alerting": false,
+  "info": {
+    "description": "Pocket Data Source for Grafana",
+    "author": {
+      "name": "David Kaltschmidt",
+      "url": "https://github.com/davkal"
+    },
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  }
+}
