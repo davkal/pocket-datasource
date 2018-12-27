@@ -22,18 +22,20 @@ function getAccessToken(input: string): string {
 export default class PocketConfigCtrl {
   static templateUrl = 'partials/config.html';
   backendSrv: any;
-  datasourceSrv: any;
+  $rootScope: any;
   current: any;
   status: string;
+  hasToken: boolean;
 
   /** @ngInject */
-  constructor(backendSrv, datasourceSrv) {
+  constructor(backendSrv, $rootScope) {
     this.backendSrv = backendSrv;
-    this.datasourceSrv = datasourceSrv;
+    this.$rootScope = $rootScope;
     this.current.jsonData = this.current.jsonData || {};
     this.current.secureJsonFields = this.current.secureJsonFields || {};
     this.current.url = POCKET_URL;
     this.status = this.getStatus();
+    this.hasToken = this.current.jsonData.accessToken !== undefined;
 
     // Land back here to acquire access token (Step 4)
     if (getRequestToken()) {
@@ -129,6 +131,8 @@ export default class PocketConfigCtrl {
     this.current.jsonData.accessToken = accessToken;
     this.current = await this.updateDatasource();
     this.status = this.getStatus();
+    this.hasToken = true;
+    this.$rootScope.$apply();
   }
 
   async updateDatasource() {
