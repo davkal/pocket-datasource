@@ -1,6 +1,6 @@
 {
   "name": "grafana-pocket-datasource",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Grafana data source for Pocket",
   "private": true,
   "scripts": {
@@ -14,7 +14,10 @@
   "author": "David Kaltschmidt",
   "license": "Apache",
   "lint-staged": {
-    "*.{js,ts,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,ts,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "prettier": {
     "singleQuote": true,
