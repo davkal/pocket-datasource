@@ -6,11 +6,18 @@ Show graphs about your [Pocket](https://getpocket.com/) usage.
 
 ![Screenshot](src/img/pocket-screenshot.png?raw=true)
 
-## Queries
+## Get started
 
-- Cumulative item counts (unread and archived)
-- Daily adds
-- Daily reads
+1. Download the latest release to your Grafana's `data/plugins` directory.
+2. Restart Grafana
+3. Add Pocket as a datasource
+4. Create a new dashboard with graph panel
+5. Choose one of the following time series
+   - Cumulative item counts (unread and archived)
+   - Daily adds
+   - Daily reads
+   
+Note: Depending on your Pocket activity, you might have to select a long time range to see any results, e.g., Last 2 years.
 
 ## Authentication with Pocket
 
