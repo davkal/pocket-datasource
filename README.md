@@ -8,9 +8,9 @@ Show graphs about your [Pocket](https://getpocket.com/) usage.
 
 ## Get started
 
-1. Download the latest release to your Grafana's `data/plugins` directory.
+1. Download the latest release and [install it as plugin](http://docs.grafana.org/plugins/installation/)
 2. Restart Grafana
-3. Add Pocket as a datasource
+3. Go to Configuration/Datasources and add Pocket as a datasource
 4. Create a new dashboard with graph panel
 5. Choose one of the following time series
    - Cumulative item counts (unread and archived)
