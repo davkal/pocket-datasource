@@ -1,7 +1,8 @@
 {
   "github": {
     "release": true,
-    "assets": ["dist/*.zip"]
+    "assets": ["pkg/*.zip"]
   },
-  "buildCommand": "npm run build; cd dist; zip -r pocket-datasource-${version}.zip *"
+  "buildCommand":
+    "npm run build; mkdir -p pkg; cp -r dist pkg/pocket-datasource; cd pkg; zip -r pocket-datasource-${version}.zip pocket-datasource;"
 }
